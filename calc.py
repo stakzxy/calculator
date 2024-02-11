@@ -17,8 +17,8 @@ ____________________________
 |<05> Sine                 |
 |<06> Cosine               |
 |<07> Tangent              |
-|<08> Quadratic equation2  |
-|<09> Quadratic equation3  |
+|<08> Quadratic equation1  |
+|<09> Quadratic equation2  |
 |<10> History              |
 |__________________________|
 |<98> Credits              |
