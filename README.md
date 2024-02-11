@@ -1,1 +1,1 @@
-First download python obviously, after download colorama using ` pip install colorama `. after, execute the calc.py and enjoy.
+First download python obviously, then download colorama using `pip install colorama`. Then, run the calc.py and enjoy.
