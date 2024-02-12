@@ -8,7 +8,7 @@ print(Fore.CYAN+"""
    / __ \/ __ \/ __ \/ _ \/ __ \/ / |/_/
   / /_/ / / / / /_/ /  __/ / / / />  <  
  / .___/_/ /_/\____/\___/_/ /_/_/_/|_|  
-/_/               V 1.0.0
+/_/               V 1.0.5
 ____________________________
 |<01> Sum                  |
 |<02> Subtraction          |
@@ -27,38 +27,38 @@ ____________________________
 |__________________________|"""+Fore.WHITE)
 
 while True:
-    ope = input("Enter the desired operation number: ")
-    if ope == "00":
+    ope = input("\nEnter the desired operation number: ")
+    if ope == "00" or ope == "0":
         break
     elif ope == "10":
         with open("zzz.txt", "r") as file:
-            print(file.read())
-    elif ope == "01":
-        num_variables = int(input("Enter the number of variables for summation: "))
-        variables = [float(input(f"Enter the value of variable {chr(97 + i)}: ")) for i in range(num_variables)]
+            print("\n"+file.read())
+    elif ope == "01" or ope == "1":
+        num_variables = int(input("\nEnter the number of variables for summation: "))
+        variables = [float(input(f"\nEnter the value of variable {chr(97 + i)}: ")) for i in range(num_variables)]
         result = sum(variables)
         print("The result of the summation is:", result)
         with open("zzz.txt", "a") as file:
             file.write(f"Summation of {variables} = {result}\n")
-    elif ope == "02":
-        a = float(input("Enter the first number for subtraction: "))
-        b = float(input("Enter the second number for subtraction: "))
+    elif ope == "02" or ope == "2":
+        a = float(input("\nEnter the first number for subtraction: "))
+        b = float(input("\nEnter the second number for subtraction: "))
         result = a - b
         print("The result of the subtraction is:", result)
         with open("zzz.txt", "a") as file:
             file.write(f"Subtraction of {a} and {b} = {result}\n")
-    elif ope == "03":
-        num_variables = int(input("Enter the number of variables for multiplication: "))
-        variables = [float(input(f"Enter the value of variable {chr(97 + i)}: ")) for i in range(num_variables)]
+    elif ope == "03" or ope == "3":
+        num_variables = int(input("\nEnter the number of variables for multiplication: "))
+        variables = [float(input(f"\nEnter the value of variable {chr(97 + i)}: ")) for i in range(num_variables)]
         result = 1
         for variable in variables:
             result *= variable
         print("The result of the multiplication is:", result)
         with open("zzz.txt", "a") as file:
             file.write(f"Multiplication of {variables} = {result}\n")
-    elif ope == "04":
-        a = float(input("Enter the numerator for division: "))
-        b = float(input("Enter the denominator for division: "))
+    elif ope == "04" or ope == "4":
+        a = float(input("\nEnter the numerator for division: "))
+        b = float(input("\nEnter the denominator for division: "))
         if b == 0:
             print("Error: division by zero")
             with open("zzz.txt", "a") as file:
@@ -68,27 +68,27 @@ while True:
             print("The result of the division is:", result)
             with open("zzz.txt", "a") as file:
                 file.write(f"Division of {a} and {b} = {result}\n")
-    elif ope == "05":
-        angle = float(input("Enter the angle in degrees to calculate the sine: "))
+    elif ope == "05" or ope == "5":
+        angle = float(input("\nEnter the angle in degrees to calculate the sine: "))
         result = math.sin(math.radians(angle))
         print("The result of the sine is:", result)
         with open("zzz.txt", "a") as file:
             file.write(f"Sine of {angle} = {result}\n")
-    elif ope == "06":
-        angle = float(input("Enter the angle in degrees to calculate the cosine: "))
+    elif ope == "06" or ope == "6":
+        angle = float(input("\nEnter the angle in degrees to calculate the cosine: "))
         result = math.cos(math.radians(angle))
         print("The result of the cosine is:", result)
         with open("zzz.txt", "a") as file:
             file.write(f"Cosine of {angle} = {result}\n")
-    elif ope == "07":
-        angle = float(input("Enter the angle in degrees to calculate the tangent: "))
+    elif ope == "07" or ope == "7":
+        angle = float(input("\nEnter the angle in degrees to calculate the tangent: "))
         result = math.tan(math.radians(angle))
         print("The result of the tangent is:", result)
         with open("zzz.txt", "a") as file:
             file.write(f"Tangent of {angle} = {result}\n")
-    elif ope == "08":
-        a = float(input("Enter the coefficient a of the first degree equation: "))
-        b = float(input("Enter the coefficient b of the first degree equation: "))
+    elif ope == "08" or ope == "8":
+        a = float(input("\nEnter the coefficient a of the first degree equation: "))
+        b = float(input("\nEnter the coefficient b of the first degree equation: "))
         if a == 0:
             print("The equation is not of the first degree")
             with open("zzz.txt", "a") as file:
@@ -98,10 +98,10 @@ while True:
             print(f"The result of the first degree equation is: {result}")
             with open("zzz.txt", "a") as file:
                 file.write(f"First degree equation with a={a} and b={b} = {result}\n")
-    elif ope == "09":
-        a = float(input("Enter the coefficient a of the second degree equation: "))
-        b = float(input("Enter the coefficient b of the second degree equation: "))
-        c = float(input("Enter the coefficient c of the second degree equation: "))
+    elif ope == "09" or ope == "9":
+        a = float(input("\nEnter the coefficient a of the second degree equation: "))
+        b = float(input("\nEnter the coefficient b of the second degree equation: "))
+        c = float(input("\nEnter the coefficient c of the second degree equation: "))
         delta = b**2 - 4*a*c
         if delta > 0:
             x1 = (-b + math.sqrt(delta)) / (2*a)
